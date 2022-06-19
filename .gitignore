@@ -1,0 +1,4 @@
+#IGNORE
+.idea/
+target/
+*.log
