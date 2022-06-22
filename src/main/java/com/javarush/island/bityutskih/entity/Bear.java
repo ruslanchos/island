@@ -1,6 +1,10 @@
 package com.javarush.island.bityutskih.entity;
 
-import com.javarush.island.bityutskih.Preadator;
+import com.javarush.island.bityutskih.Preadators;
 
-public class Bear extends Preadator {
+public class Bear extends Preadators {
+
+
+    public Bear() {
+    }
 }

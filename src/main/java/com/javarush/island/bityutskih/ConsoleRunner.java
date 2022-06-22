@@ -20,5 +20,5 @@ public class ConsoleRunner {
 //        Game game = new Game(gameMap, entityFactory,view);
 //        GameWorker gameWorker = new GameWorker(game);
 //        gameWorker.start();
-    }
+
 }
