@@ -1,6 +1,5 @@
 package com.javarush.island.bityutskih;
 
-import com.javarush.island.bityutskih.entity.ServiceRunner;
 import com.javarush.island.bityutskih.services.ServiceRunner;
 
 //import com.javarush.island.bityutskih.repository.EntityFactory;
@@ -9,8 +8,9 @@ import com.javarush.island.bityutskih.services.ServiceRunner;
 //import com.javarush.island.bityutskih.view.ConsoleView;
 //import com.javarush.island.bityutskih.view.View;
 
-public class Runner {
+public class ConsoleRunner {
     public static void main(String[] args) {
+
         new ServiceRunner().runService();
     }
         //        EntityFactory entityFactory = new EntityFactory();
