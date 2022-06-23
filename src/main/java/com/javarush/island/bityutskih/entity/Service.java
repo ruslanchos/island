@@ -9,7 +9,7 @@ public class Service {
         return nature;
     }
 
-    public void makingNature() {
+    public void makeNature() {
         preAnimal(new Bear());
         preAnimal(new Boa());
         preAnimal(new Boar());

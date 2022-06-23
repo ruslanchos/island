@@ -5,22 +5,24 @@ import com.javarush.island.bityutskih.entity.Nature;
 import com.javarush.island.bityutskih.entity.Plant;
 import com.javarush.island.bityutskih.entity.Service;
 import java.util.concurrent.*;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
+import java.util.Scanner;
+
 
 public class ServiceRunner {
     private final Service service;
+
     public ServiceRunner() {
         this.service = new Service();
     }
     public void runService() {
-        service.makingNature();
+        service.makeNature();
         CopyOnWriteArrayList<Nature> nature = service.getNature();
         ExecutorService animalExecService = Executors.newFixedThreadPool(2);
         ExecutorService plantExecService = Executors.newFixedThreadPool(2);
-        ScheduledExecutorService shedulerExecService = Executors.newScheduledThreadPool(8);
+        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(8);
 
+        scheduledExecutorService.scheduleAtFixedRate(new ServiceStatistics(service), 0, 1, TimeUnit.SECONDS);
+        scheduledExecutorService.scheduleAtFixedRate(new ServiceClean(service), 500, 1000, TimeUnit.MILLISECONDS);
 
         for (Nature a : nature) {
             if (a instanceof Animal) {
@@ -30,6 +32,16 @@ public class ServiceRunner {
             }
 
         }
-
+        try {
+            Thread.currentThread().sleep(5000);
+            animalExecService.shutdown();
+            plantExecService.shutdown();
+            scheduledExecutorService.shutdown();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        animalExecService.shutdownNow();
+        plantExecService.shutdownNow();
+        scheduledExecutorService.shutdownNow();
     }
 }
