@@ -1,6 +1,8 @@
 package ru.javarush.island.bityutskih.services;
 
 import ru.javarush.island.bityutskih.entity.Animal;
+import ru.javarush.island.bityutskih.entity.Nature;
+import ru.javarush.island.bityutskih.entity.Plant;
 import ru.javarush.island.bityutskih.entity.Service;
 
 import java.util.concurrent.CopyOnWriteArrayList;
