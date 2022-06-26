@@ -58,12 +58,12 @@ public class AnimalRunner implements Runnable {
     }
 
     public void reproduce() {
-        if (!animal.isDead()) {
-        }
+        if(!animal.isDead());
+
     }
 
     public void move() {
-        if (!animal.isDead()) {
-        }
+        if (!animal.isDead());
+
     }
 }
