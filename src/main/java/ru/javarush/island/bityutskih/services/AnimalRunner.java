@@ -43,8 +43,8 @@ public class AnimalRunner implements Runnable {
     private void tryToEat(Nature n) {
         Integer chance = animal.getEating().get(n.getClass().getCanonicalName());
         if (chance != null && chance > 0) {
-            int rndNum = RndGen.getRndNum(100);
-            if (chance >= rndNum) {
+            int randomNum = Random.getRandomNum(100);
+            if (chance >= randomNum) {
                 if (n instanceof Plant) {
                     animal.setFull(animal.getFull() + n.getWeight());
                 } else {
