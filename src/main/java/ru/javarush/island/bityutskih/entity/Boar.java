@@ -14,7 +14,7 @@ public class Boar extends Herbivores {
 
     public Boar() {
         EATING.put(Bear.class.getCanonicalName(), 0);
-        EATING.put(Boa.class.getCanonicalName(), 0);
+        EATING.put(Snake.class.getCanonicalName(), 0);
         EATING.put(Buffalo.class.getCanonicalName(), 0);
         EATING.put(Caterpillar.class.getCanonicalName(), 90);
         EATING.put(Deer.class.getCanonicalName(), 0);
@@ -34,6 +34,7 @@ public class Boar extends Herbivores {
         return WEIGHT;
     }
 
+    @Override
     public int getSpeciesPerService() {
         return MAX_COUNTER;
     }
@@ -51,6 +52,6 @@ public class Boar extends Herbivores {
     }
 
     public Nature getInstance() {
-        return new Boa();
+        return new Snake();
     }
 }

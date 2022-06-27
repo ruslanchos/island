@@ -9,6 +9,7 @@ public abstract class Animal implements Nature {
 
     public abstract float getWeight();
 
+    @Override
     public abstract int getSpeciesPerService();
 
     public abstract int getSpeed();

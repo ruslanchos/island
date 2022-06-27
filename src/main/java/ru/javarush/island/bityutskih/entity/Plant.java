@@ -10,6 +10,7 @@ public class Plant implements Nature{
     public float getWeight() {
         return WEIGHT;
     }
+    @Override
     public int getSpeciesPerService() {
         return MAX_COUNTER;
     }

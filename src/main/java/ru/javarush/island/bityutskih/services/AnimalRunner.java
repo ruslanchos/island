@@ -7,6 +7,8 @@ import ru.javarush.island.bityutskih.entity.Service;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import static ru.javarush.island.bityutskih.services.Random.getRandomsNum;
+
 public class AnimalRunner implements Runnable {
     private final Animal animal;
     private final Service service;
@@ -45,8 +47,8 @@ public class AnimalRunner implements Runnable {
     private void tryToEat(Nature n) {
         Integer chance = animal.getEating().get(n.getClass().getCanonicalName());
         if (chance != null && chance > 0) {
-            int randomNum = Random.getRandomNum(100);
-            if (chance >= randomNum) {
+            int randomsNum = getRandomsNum(1000);
+            if (chance >= randomsNum) {
                 if (n instanceof Plant) {
                     animal.setFull(animal.getFull() + n.getWeight());
                 } else {

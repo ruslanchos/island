@@ -2,17 +2,16 @@ package ru.javarush.island.bityutskih.entity;
 
 import ru.javarush.island.bityutskih.Predators;
 
-import java.lang.ref.PhantomReference;
 import java.util.HashMap;
 
-public class Boa extends Predators {
+public class Snake extends Predators {
     private final float WEIGHT = 15;
     private final int MAX_COUNTER = 30;
     private final int SPEED = 1;
     private final float MAX_FOOD = 3;
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
-    public Boa() {
+    public Snake() {
         EATING.put(Bear.class.getCanonicalName(), 0);
         EATING.put(Boar.class.getCanonicalName(), 0);
         EATING.put(Buffalo.class.getCanonicalName(), 0);
@@ -34,6 +33,7 @@ public class Boa extends Predators {
         return WEIGHT;
     }
 
+    @Override
     public int getSpeciesPerService() {
         return MAX_COUNTER;
     }
@@ -52,7 +52,7 @@ public class Boa extends Predators {
 
     @Override
     public Nature getInstance() {
-        return new Boa();
+        return new Snake();
     }
 
 

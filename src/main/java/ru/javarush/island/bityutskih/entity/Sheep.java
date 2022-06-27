@@ -13,7 +13,7 @@ public class Sheep extends Herbivores {
 
     public Sheep() {
         EATING.put(Bear.class.getCanonicalName(), 0);
-        EATING.put(Boa.class.getCanonicalName(), 0);
+        EATING.put(Snake.class.getCanonicalName(), 0);
         EATING.put(Boar.class.getCanonicalName(), 0);
         EATING.put(Buffalo.class.getCanonicalName(), 0);
         EATING.put(Caterpillar.class.getCanonicalName(), 0);
@@ -33,6 +33,7 @@ public class Sheep extends Herbivores {
         return WEIGHT;
     }
 
+    @Override
     public int getSpeciesPerService() {
         return MAX_COUNTER;
     }

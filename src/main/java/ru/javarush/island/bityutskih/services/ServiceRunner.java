@@ -16,9 +16,9 @@ public class ServiceRunner {
     public void runService() {
         service.makeNature();
         CopyOnWriteArrayList<Nature> nature = service.getNature();
-        ExecutorService animalExecService = Executors.newFixedThreadPool(2);
-        ExecutorService plantExecService = Executors.newFixedThreadPool(2);
-        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(8);
+        ExecutorService animalExecService = Executors.newFixedThreadPool(100);
+        ExecutorService plantExecService = Executors.newFixedThreadPool(100);
+        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(10000);
 
         scheduledExecutorService.scheduleAtFixedRate(new ServiceStatistics(service), 0, 1, TimeUnit.SECONDS);
         scheduledExecutorService.scheduleAtFixedRate(new ServiceClean(service), 500, 1000, TimeUnit.MILLISECONDS);

@@ -13,7 +13,7 @@ public class Wolf extends Predators {
 
     public Wolf() {
         EATING.put(Bear.class.getCanonicalName(), 0);
-        EATING.put(Boa.class.getCanonicalName(), 0);
+        EATING.put(Snake.class.getCanonicalName(), 0);
         EATING.put(Boar.class.getCanonicalName(), 15);
         EATING.put(Buffalo.class.getCanonicalName(), 10);
         EATING.put(Caterpillar.class.getCanonicalName(), 0);
@@ -33,6 +33,7 @@ public class Wolf extends Predators {
         return WEIGHT;
     }
 
+    @Override
     public int getSpeciesPerService() {
         return MAX_COUNTER;
     }
