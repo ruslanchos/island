@@ -1,16 +1,31 @@
 package ru.javarush.island.bityutskih.entity;
 
+import ru.javarush.island.bityutskih.entity.Nature;
+
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public abstract class Animal implements Nature {
+
+    private final float WEIGHT;
+    private final int MAX_COUNTER;
+    private final int SPEED;
+    private final float MAX_FOOD;
     private AtomicBoolean isDead = new AtomicBoolean(false);
     private float full = 0;
+
+    protected Animal(float weight, int max_counter, int speed, float max_food) {
+        WEIGHT = weight;
+        MAX_COUNTER = max_counter;
+        SPEED = speed;
+        MAX_FOOD = max_food;
+    }
+
 
     public abstract float getWeight();
 
     @Override
-    public abstract int getSpeciesPerService();
+    public abstract int getobjPerService();
 
     public abstract int getSpeed();
 

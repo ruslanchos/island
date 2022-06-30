@@ -1,33 +1,33 @@
-package ru.javarush.island.bityutskih.services;
+package ru.javarush.island.bityutskih.Services;
 
-import ru.javarush.island.bityutskih.entity.Animal;
-import ru.javarush.island.bityutskih.entity.Nature;
-import ru.javarush.island.bityutskih.entity.Plant;
-import ru.javarush.island.bityutskih.entity.Service;
+import ru.javarush.island.bityutskih.Services.Animal;
+import ru.javarush.island.bityutskih.Services.Nature;
+import ru.javarush.island.bityutskih.Services.Plant;
+import ru.javarush.island.bityutskih.Services.Service;
 import java.util.concurrent.*;
 
 
 public class ServiceRunner {
-    private final Service service;
+    private final Service Service;
 
     public ServiceRunner() {
-        this.service = new Service();
+        this.Service = new Service();
     }
     public void runService() {
-        service.makeNature();
-        CopyOnWriteArrayList<Nature> nature = service.getNature();
+        Service.makeNature();
+        CopyOnWriteArrayList<Nature> nature = Service.getNature();
         ExecutorService animalExecService = Executors.newFixedThreadPool(100);
         ExecutorService plantExecService = Executors.newFixedThreadPool(100);
         ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(10000);
 
-        scheduledExecutorService.scheduleAtFixedRate(new ServiceStatistics(service), 0, 1, TimeUnit.SECONDS);
-        scheduledExecutorService.scheduleAtFixedRate(new ServiceClean(service), 500, 1000, TimeUnit.MILLISECONDS);
+        scheduledExecutorService.scheduleAtFixedRate(new ServiceStatistics(Service), 0, 1, TimeUnit.SECONDS);
+        scheduledExecutorService.scheduleAtFixedRate(new ServiceClean(Service), 500, 1000, TimeUnit.MILLISECONDS);
 
         for (Nature a : nature) {
             if (a instanceof Animal) {
-                animalExecService.submit(new AnimalRunner((Animal) a, service));
+                animalExecService.submit(new AnimalRunner((Animal) a, Service));
             } else if (a instanceof Plant) {
-                plantExecService.submit(new PlantRunner((Plant) a, service));
+                plantExecService.submit(new PlantRunner((Plant) a, Service));
             }
 
         }

@@ -7,10 +7,10 @@ import java.io.FileReader;
 public class JsonSimpleParser {
     public Root parse() {
         JSONParser parser = new JSONParser();
-        try (FileReader reader = new FileReader("settings.yaml")) {
+        try (FileReader reader = new FileReader("bityutskih/recources/setting.json")) {
 
             parser.parse(reader);
-            String name = (String) rootJsonObject.get("name")
+            //String name = (String) rootJsonObject.get("name")
 
         } catch (Exception e) {
             System.out.println("Parse ERROR" + e.toString());

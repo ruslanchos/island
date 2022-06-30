@@ -1,6 +1,9 @@
 package ru.javarush.island.bityutskih.entity;
 
-import ru.javarush.island.bityutskih.Herbivores;
+import ru.javarush.island.bityutskih.entity.Boar;
+import ru.javarush.island.bityutskih.Services.Buffalo;
+import ru.javarush.island.bityutskih.Services.Caterpillar;
+import ru.javarush.island.bityutskih.Services.Snake;
 
 import java.util.HashMap;
 
@@ -34,7 +37,7 @@ public class Mouse extends Herbivores {
     }
 
     @Override
-    public int getSpeciesPerService() {
+    public int getobjPerService() {
         return MAX_COUNTER;
     }
 
@@ -51,6 +54,6 @@ public class Mouse extends Herbivores {
     }
 
     public Nature getInstance() {
-        return new Mouse();
+        return (Nature) new Mouse();
     }
 }

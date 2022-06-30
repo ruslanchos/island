@@ -1,5 +1,7 @@
 package ru.javarush.island.bityutskih.entity;
 
+import ru.javarush.island.bityutskih.entity.Nature;
+
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Plant implements Nature{
@@ -10,17 +12,23 @@ public class Plant implements Nature{
     public float getWeight() {
         return WEIGHT;
     }
+
     @Override
-    public int getSpeciesPerService() {
-        return MAX_COUNTER;
+    public boolean isDead() {
+        return false;
     }
 
-    public boolean isDead() {
-        return isDead.get();
+    @Override
+    public int getobjPerService() {
+        return MAX_COUNTER;
     }
 
     public void setDead() {
         isDead.set(true);
+    }
+
+    public void setAlive() {
+        isDead.set(false);
     }
 
     @Override
@@ -28,4 +36,8 @@ public class Plant implements Nature{
         return new Plant();
     }
 
+    @Override
+    public String toString() {
+        return "Plant";
+    }
 }

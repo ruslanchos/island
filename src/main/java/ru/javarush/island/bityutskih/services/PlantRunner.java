@@ -1,20 +1,20 @@
-package ru.javarush.island.bityutskih.services;
+package ru.javarush.island.bityutskih.Services;
 
-import ru.javarush.island.bityutskih.entity.Plant;
-import ru.javarush.island.bityutskih.entity.Service;
+import ru.javarush.island.bityutskih.Services.Plant;
+import ru.javarush.island.bityutskih.Services.Service;
 
 public class PlantRunner implements Runnable {
     private final Plant plant;
-    private final Service service;
-//    public PlantRunner(Plant plant, Service service) {
+    private final Service Service;
+//    public PlantRunner(Plant plant, Service Service) {
 //    }
 //
 //    @Override
 //    public void run() {
 
-   public PlantRunner(Plant plant, Service service) {
+   public PlantRunner(Plant plant, Service Service) {
             this.plant = plant;
-            this.service = service;
+            this.Service = Service;
         }
 
         @Override

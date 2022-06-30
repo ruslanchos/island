@@ -1,18 +1,17 @@
-package ru.javarush.island.bityutskih.services;
+package ru.javarush.island.bityutskih.Services;
 
 
-import ru.javarush.island.bityutskih.Herbivores;
-import ru.javarush.island.bityutskih.Predators;
-import ru.javarush.island.bityutskih.entity.Nature;
-import ru.javarush.island.bityutskih.entity.Plant;
-import ru.javarush.island.bityutskih.entity.Service;
+import ru.javarush.island.bityutskih.entity.Herbivores;
+import ru.javarush.island.bityutskih.entity.Predators;
+import ru.javarush.island.bityutskih.Services.Nature;
+import ru.javarush.island.bityutskih.Services.Plant;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ServiceStatistics implements Runnable {
-    private final Service service;
-    public ServiceStatistics(Service service) {
-        this.service = service;
+    private final Service Service;
+    public ServiceStatistics(Service Service) {
+        this.Service = Service;
     }
 
         @Override
@@ -22,16 +21,16 @@ public class ServiceStatistics implements Runnable {
             int plantCount = 0;
             int deadCount = 0;
 
-            CopyOnWriteArrayList<Nature> nature = service.getNature();
-            for (Nature species : nature) {
-                if(species instanceof Predators && !species.isDead()) {
+            CopyOnWriteArrayList<Nature> nature = Service.getNature();
+            for (Nature obj : nature) {
+                if(obj instanceof Predators && !obj.isDead()) {
                     predatorCount++;
-                } else if (species instanceof Herbivores && !species.isDead()) {
+                } else if (obj instanceof Herbivores && !obj.isDead()) {
                     herbCount++;
-                } else if (species instanceof Plant && !species.isDead()) {
+                } else if (obj instanceof Plant && !obj.isDead()) {
                     plantCount++;
                 }
-                if(species.isDead()) {
+                if(obj.isDead()) {
                     deadCount++;
                 }
             }

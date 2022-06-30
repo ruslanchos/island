@@ -1,4 +1,4 @@
-package ru.javarush.island.bityutskih.services;
+package ru.javarush.island.bityutskih.Services;
 
 public class Fields {
 

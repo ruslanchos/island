@@ -1,8 +1,6 @@
 package ru.javarush.island.bityutskih.entity;
-
-import static ru.javarush.island.bityutskih.services.Random.getRandomsNum;
-
-
+package ru.javarush.island.bityutskih.Services.ServiceStatistics;
+import static ru.javarush.island.bityutskih.Services.Random.getRandomsNum;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 
@@ -12,7 +10,8 @@ public class Service {
     public CopyOnWriteArrayList<Nature> getNature() {
         return nature;
     }
-
+/*    private final Service[][] Services;
+    private ServiceStatistics ServiceStatistics;*/
     public void makeNature() {
         preAnimal(new Bear());
         preAnimal(new Snake());
@@ -33,7 +32,7 @@ public class Service {
     }
     private void preAnimal(Nature n){
         nature.add(n);
-        for(int i = 1; i <= getRandomsNum(n.getSpeciesPerService() / 2, n.getSpeciesPerService() + 1); i++) {
+        for(int i = 1; i <= getRandomsNum(n.getobjPerService() / 2, n.getobjPerService() + 1); i++) {
             nature.add(n.getInstance());
         }
     }

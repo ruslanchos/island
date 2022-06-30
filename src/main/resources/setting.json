@@ -4,7 +4,7 @@
   "cols": 5,
   "showRows": 5,
   "showCols": 5,
-  "consoleCellWith": 5,
+  "consoleServiceWith": 5,
   "percentAnimalSlim": 5,
   "percentPlantGrow": 15,
   "foodMap":

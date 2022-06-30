@@ -1,21 +1,42 @@
-package ru.javarush.island.bityutskih.services;
+package ru.javarush.island.bityutskih.Services;
+
+
+import ru.javarush.island.bityutskih.Services.Animal;
+import ru.javarush.island.bityutskih.Services.Service;
+
+public class AnimalRunner implements Runnable {
+    public AnimalRunner(Animal animal, Service Service) {
+    }
+
+    @Override
+    public void run() {
+
+    }
+}
+
+
+
+/*
+package ru.javarush.island.bityutskih.Services;
 
 import ru.javarush.island.bityutskih.entity.Animal;
 import ru.javarush.island.bityutskih.entity.Nature;
 import ru.javarush.island.bityutskih.entity.Plant;
+import ru.javarush.island.bityutskih.entity.Setting;
+import ru.javarush.island.bityutskih.entity.Random;
 import ru.javarush.island.bityutskih.entity.Service;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import static ru.javarush.island.bityutskih.services.Random.getRandomsNum;
+import static ru.javarush.island.bityutskih.Services.Random.getRandomsNum;
 
 public class AnimalRunner implements Runnable {
     private final Animal animal;
-    private final Service service;
+    private final Service Service;
 
-    public AnimalRunner(Animal animal, Service service) {
+    public AnimalRunner(Animal animal, Service Service) {
         this.animal = animal;
-        this.service = service;
+        this.Service = Service;
     }
 
     @Override
@@ -32,7 +53,7 @@ public class AnimalRunner implements Runnable {
     }
 
     public void eat() {
-        CopyOnWriteArrayList<Nature> nature = service.getNature();
+        CopyOnWriteArrayList<Nature> nature = Service.getNature();
 
         for (Nature n : nature) {
             if (animal != n
@@ -67,5 +88,6 @@ public class AnimalRunner implements Runnable {
     public void move() {
         if (!animal.isDead());
 
+        }
     }
-}
+}*/

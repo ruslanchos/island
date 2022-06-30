@@ -1,6 +1,7 @@
-package ru.javarush.island.bityutskih.entity;
+package ru.javarush.island.bityutskih.Services;
 
-import ru.javarush.island.bityutskih.Predators;
+import ru.javarush.island.bityutskih.entity.Predators;
+import ru.javarush.island.bityutskih.entity.Nature;
 
 import java.util.HashMap;
 
@@ -34,7 +35,7 @@ public class Wolf extends Predators {
     }
 
     @Override
-    public int getSpeciesPerService() {
+    public int getobjPerService() {
         return MAX_COUNTER;
     }
 
@@ -52,5 +53,10 @@ public class Wolf extends Predators {
 
     public Nature getInstance() {
         return new Wolf();
+    }
+
+    @Override
+    public String toString() {
+        return "Wolf";
     }
 }

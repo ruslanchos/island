@@ -1,7 +1,7 @@
-package ru.javarush.island.bityutskih.entity;
+package ru.javarush.island.bityutskih.Services;
 
 
-import ru.javarush.island.bityutskih.Herbivores;
+import ru.javarush.island.bityutskih.entity.Herbivores;
 
 import java.util.HashMap;
 
@@ -35,7 +35,7 @@ public class Boar extends Herbivores {
     }
 
     @Override
-    public int getSpeciesPerService() {
+    public int getobjPerService() {
         return MAX_COUNTER;
     }
 

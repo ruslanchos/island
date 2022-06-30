@@ -1,7 +1,7 @@
 package ru.javarush.island.bityutskih.entity;
 
 public interface Nature {
-    int getSpeciesPerService();
+    int getobjPerService();
 
     void setDead();
 
@@ -10,4 +10,6 @@ public interface Nature {
     boolean isDead();
 
     Nature getInstance();
+
+    String toString();
 }
