@@ -1,15 +1,15 @@
-package ru.javarush.island.bityutskih.Services;
+package ru.javarush.island.bityutskih.services;
 
-import ru.javarush.island.bityutskih.Services.Nature;
-import ru.javarush.island.bityutskih.Services.Service;
+import ru.javarush.island.bityutskih.entity.Nature;
+import ru.javarush.island.bityutskih.entity.Service;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ServiceClean implements Runnable{
-    private final Service Service;
-    public ServiceClean(Service Service)
+    private final Service service;
+    public ServiceClean(Service service)
     {
-        this.Service = Service;
+        this.service = service;
     }
 
 
@@ -21,7 +21,7 @@ public class ServiceClean implements Runnable{
             throw new RuntimeException(e);
         }
 
-        CopyOnWriteArrayList<Nature> nature = Service.getNature();
+        CopyOnWriteArrayList<Nature> nature = service.getNature();
 
         for (int i = 0; i < nature.size(); i++) {
             if (nature.get(i) != null && nature.get(i).isDead()) {

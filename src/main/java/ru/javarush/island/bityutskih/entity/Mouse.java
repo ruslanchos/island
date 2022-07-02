@@ -1,9 +1,5 @@
 package ru.javarush.island.bityutskih.entity;
 
-import ru.javarush.island.bityutskih.entity.Boar;
-import ru.javarush.island.bityutskih.Services.Buffalo;
-import ru.javarush.island.bityutskih.Services.Caterpillar;
-import ru.javarush.island.bityutskih.Services.Snake;
 
 import java.util.HashMap;
 
@@ -15,8 +11,9 @@ public class Mouse extends Herbivores {
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
     public Mouse() {
+        super(0.05F,500,1,0.01F);
         EATING.put(Bear.class.getCanonicalName(), 0);
-        EATING.put(Snake.class.getCanonicalName(), 0);
+        EATING.put(Boa.class.getCanonicalName(), 0);
         EATING.put(Boar.class.getCanonicalName(), 0);
         EATING.put(Buffalo.class.getCanonicalName(), 0);
         EATING.put(Caterpillar.class.getCanonicalName(), 90);

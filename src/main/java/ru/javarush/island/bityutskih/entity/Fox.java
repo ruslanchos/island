@@ -1,7 +1,5 @@
-package ru.javarush.island.bityutskih.Services;
+package ru.javarush.island.bityutskih.entity;
 
-import ru.javarush.island.bityutskih.entity.Predators;
-import ru.javarush.island.bityutskih.entity.Nature;
 
 import java.util.HashMap;
 
@@ -13,8 +11,9 @@ public class Fox extends Predators {
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
     public Fox() {
+        super(8,30,2,2);
         EATING.put(Bear.class.getCanonicalName(), 0);
-        EATING.put(Snake.class.getCanonicalName(), 0);
+        EATING.put(Boa.class.getCanonicalName(), 0);
         EATING.put(Boar.class.getCanonicalName(), 0);
         EATING.put(Buffalo.class.getCanonicalName(), 0);
         EATING.put(Caterpillar.class.getCanonicalName(), 40);

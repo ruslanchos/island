@@ -1,20 +1,22 @@
-package ru.javarush.island.bityutskih.Services;
+package ru.javarush.island.bityutskih.services;
 
-import ru.javarush.island.bityutskih.Services.Plant;
-import ru.javarush.island.bityutskih.Services.Service;
+import ru.javarush.island.bityutskih.entity.Plant;
+import ru.javarush.island.bityutskih.entity.Service;
+import ru.javarush.island.bityutskih.services.Sleep;
+
 
 public class PlantRunner implements Runnable {
     private final Plant plant;
-    private final Service Service;
+    private final Service service;
 //    public PlantRunner(Plant plant, Service Service) {
 //    }
 //
 //    @Override
 //    public void run() {
 
-   public PlantRunner(Plant plant, Service Service) {
+   public PlantRunner(Plant plant, Service service) {
             this.plant = plant;
-            this.Service = Service;
+            this.service = service;
         }
 
         @Override
@@ -26,6 +28,6 @@ public class PlantRunner implements Runnable {
         }
 
         public void reproduce() {
-           // System.out.println(plant.getClass().getCanonicalName() + " reproduce");
+
         }
     }

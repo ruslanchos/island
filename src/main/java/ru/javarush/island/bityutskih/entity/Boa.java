@@ -1,18 +1,19 @@
-package ru.javarush.island.bityutskih.Services;
+package ru.javarush.island.bityutskih.entity;
 
 import ru.javarush.island.bityutskih.entity.Predators;
 import ru.javarush.island.bityutskih.entity.Nature;
 
 import java.util.HashMap;
 
-public class Snake extends Predators {
+public class Boa extends Predators {
     private final float WEIGHT = 15;
     private final int MAX_COUNTER = 30;
     private final int SPEED = 1;
     private final float MAX_FOOD = 3;
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
-    public Snake() {
+    public Boa() {
+        super(15,30,1,3);
         EATING.put(Bear.class.getCanonicalName(), 0);
         EATING.put(Boar.class.getCanonicalName(), 0);
         EATING.put(Buffalo.class.getCanonicalName(), 0);
@@ -53,7 +54,7 @@ public class Snake extends Predators {
 
     @Override
     public Nature getInstance() {
-        return new Snake();
+        return new Boa();
     }
 
 

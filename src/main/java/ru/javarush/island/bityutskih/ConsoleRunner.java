@@ -1,5 +1,5 @@
 package ru.javarush.island.bityutskih;
-import ru.javarush.island.bityutskih.Services.ServiceRunner;
+import ru.javarush.island.bityutskih.services.ServiceRunner;
 
 
 public class ConsoleRunner {

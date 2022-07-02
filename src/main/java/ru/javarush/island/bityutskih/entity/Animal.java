@@ -14,12 +14,14 @@ public abstract class Animal implements Nature {
     private AtomicBoolean isDead = new AtomicBoolean(false);
     private float full = 0;
 
-    protected Animal(float weight, int max_counter, int speed, float max_food) {
-        WEIGHT = weight;
-        MAX_COUNTER = max_counter;
-        SPEED = speed;
-        MAX_FOOD = max_food;
+
+    public Animal(float weight, int max_counter, int speed, float max_food) {
+        this.WEIGHT = weight;
+        this.MAX_COUNTER = max_counter;
+        this.SPEED = speed;
+        this.MAX_FOOD = max_food;
     }
+
 
 
     public abstract float getWeight();

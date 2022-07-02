@@ -1,20 +1,16 @@
-package ru.javarush.island.bityutskih.Services;
-
-
-import ru.javarush.island.bityutskih.entity.Herbivores;
+package ru.javarush.island.bityutskih.entity;
 
 import java.util.HashMap;
 
 public class Boar extends Herbivores {
-    private final float WEIGHT = 400;
-    private final int MAX_COUNTER = 50;
     private final int SPEED = 2;
     private final float MAX_FOOD = 50;
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
     public Boar() {
+        super(400,50,2,50);
         EATING.put(Bear.class.getCanonicalName(), 0);
-        EATING.put(Snake.class.getCanonicalName(), 0);
+        EATING.put(Boar.class.getCanonicalName(), 0);
         EATING.put(Buffalo.class.getCanonicalName(), 0);
         EATING.put(Caterpillar.class.getCanonicalName(), 90);
         EATING.put(Deer.class.getCanonicalName(), 0);
@@ -31,11 +27,13 @@ public class Boar extends Herbivores {
     }
 
     public float getWeight() {
+        float WEIGHT = 400;
         return WEIGHT;
     }
 
     @Override
     public int getobjPerService() {
+        int MAX_COUNTER = 50;
         return MAX_COUNTER;
     }
 
@@ -52,6 +50,6 @@ public class Boar extends Herbivores {
     }
 
     public Nature getInstance() {
-        return new Snake();
+        return new Boar();
     }
 }

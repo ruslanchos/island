@@ -1,4 +1,4 @@
-package ru.javarush.island.bityutskih.Services;
+package ru.javarush.island.bityutskih.services;
 
 public class Sleep {
     private Sleep() {

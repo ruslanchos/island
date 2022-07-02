@@ -1,39 +1,42 @@
-package ru.javarush.island.bityutskih.Services;
-
-
+package ru.javarush.island.bityutskih.services;
+import ru.javarush.island.bityutskih.entity.*;
 import ru.javarush.island.bityutskih.entity.Herbivores;
 import ru.javarush.island.bityutskih.entity.Predators;
-import ru.javarush.island.bityutskih.Services.Nature;
-import ru.javarush.island.bityutskih.Services.Plant;
+import ru.javarush.island.bityutskih.entity.Nature;
+import ru.javarush.island.bityutskih.entity.Plant;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ServiceStatistics implements Runnable {
-    private final Service Service;
-    public ServiceStatistics(Service Service) {
-        this.Service = Service;
+    private final Service service;
+    public ServiceStatistics(Service service) {
+        this.service = service;
     }
 
         @Override
         public void run() {
-            int predatorCount = 0;
-            int herbCount = 0;
-            int plantCount = 0;
-            int deadCount = 0;
+            int predatorCounter = 0;
+            int herbCounter = 0;
+            int plantCounter = 0;
+            int deadCounter = 0;
 
-            CopyOnWriteArrayList<Nature> nature = Service.getNature();
+            CopyOnWriteArrayList<Nature> nature = service.getNature();
             for (Nature obj : nature) {
                 if(obj instanceof Predators && !obj.isDead()) {
-                    predatorCount++;
+                    predatorCounter++;
                 } else if (obj instanceof Herbivores && !obj.isDead()) {
-                    herbCount++;
+                    herbCounter++;
                 } else if (obj instanceof Plant && !obj.isDead()) {
-                    plantCount++;
+                    plantCounter++;
                 }
                 if(obj.isDead()) {
-                    deadCount++;
+                    deadCounter++;
                 }
             }
-            System.out.println("Хищники: " + predatorCount + " VS Травоядные: " + herbCount + " VS Трава: " + plantCount+ "                    Умерло: " + deadCount);
+            System.out.println("Хищников: " + predatorCounter );
+            System.out.println("Травоядных: " + herbCounter );
+            System.out.println("Трава: " + plantCounter);
+            System.out.println("Погибло: " + deadCounter);
+            System.out.println("***********************************************");
         }
     }

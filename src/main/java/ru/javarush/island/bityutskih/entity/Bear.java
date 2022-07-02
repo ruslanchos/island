@@ -1,22 +1,18 @@
 package ru.javarush.island.bityutskih.entity;
 
-import ru.javarush.island.bityutskih.Services.Boar;
-import ru.javarush.island.bityutskih.Services.Buffalo;
-import ru.javarush.island.bityutskih.Services.Caterpillar;
-import ru.javarush.island.bityutskih.Services.Snake;
+import ru.javarush.island.bityutskih.services.*;
+import ru.javarush.island.bityutskih.entity.*;
+
 
 import java.util.HashMap;
 
 public class Bear extends Predators {
     private final HashMap<String, Integer> EATING = new HashMap<>();
-    private final float WEIGHT = 500;
-    private final int MAX_COUNTER = 5;
-    private final int SPEED = 2;
-    private final float MAX_FOOD = 80;
-    //private final HashMap<String, Integer> EATING = new HashMap<>();
+
 
     public Bear() {
-        EATING.put(Snake.class.getCanonicalName(), 80);
+       super(500,5,2,80);
+        EATING.put(Boa.class.getCanonicalName(), 80);
         EATING.put(Boar.class.getCanonicalName(), 50);
         EATING.put(Buffalo.class.getCanonicalName(), 20);
         EATING.put(Caterpillar.class.getCanonicalName(), 0);
@@ -34,6 +30,34 @@ public class Bear extends Predators {
 
     }
 
+
+    @Override
+    public float getWeight() {
+        return 0;
+    }
+
+    @Override
+    public int getobjPerService() {
+        return 0;
+    }
+
+    @Override
+    public int getSpeed() {
+        return 0;
+    }
+
+    @Override
+    public float getMaxFood() {
+        return 0;
+    }
+
+    @Override
+    public HashMap<String, Integer> getEating() {
+        return null;
+    }
+
+
+
     public HashMap<String, Integer> getChanceToEat() {
         return EATING;
     }
@@ -41,10 +65,5 @@ public class Bear extends Predators {
     @Override
     public Nature getInstance() {
         return new Bear();
-    }
-
-    @Override
-    public String toString() {
-        return "Bear";
     }
 }
