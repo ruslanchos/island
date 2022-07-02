@@ -4,6 +4,6 @@ package ru.javarush.island.bityutskih.entity;
 
 public abstract class Herbivores extends Animal {
     public Herbivores(float weight, int speciesPerSpot, int travelSpeed, float foodLimit) {
-        super(weight, speciesPerSpot, travelSpeed, foodLimit);
+        super();
     }
 }

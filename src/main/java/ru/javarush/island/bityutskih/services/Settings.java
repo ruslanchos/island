@@ -1,14 +1,10 @@
-package ru.javarush.island.bityutskih.Services;
+package ru.javarush.island.bityutskih.services;
 
 import java.util.HashMap;
 
 public class Settings {
 
-
-
-
-
-        public static final int MAX_PERCENTAGE = 100;
+        public static final int MAX_PERCENT = 100;
         public static final HashMap<String, String> unicodeSymbols = new HashMap<>();
 
         static {

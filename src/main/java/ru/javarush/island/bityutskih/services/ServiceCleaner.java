@@ -5,9 +5,9 @@ import ru.javarush.island.bityutskih.entity.Service;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class ServiceClean implements Runnable{
+public class ServiceCleaner implements Runnable{
     private final Service service;
-    public ServiceClean(Service service)
+    public ServiceCleaner(Service service)
     {
         this.service = service;
     }

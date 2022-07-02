@@ -1,7 +1,7 @@
 package ru.javarush.island.bityutskih.services;
 
-public class Sleep {
-    private Sleep() {
+public class ServiceSleep {
+    private ServiceSleep() {
     }
 
     public static void sleep(int timeout) {

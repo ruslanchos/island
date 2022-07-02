@@ -1,15 +1,9 @@
 package ru.javarush.island.bityutskih.entity;
 
-import ru.javarush.island.bityutskih.entity.Predators;
-import ru.javarush.island.bityutskih.entity.Nature;
 
 import java.util.HashMap;
 
 public class Boa extends Predators {
-    private final float WEIGHT = 15;
-    private final int MAX_COUNTER = 30;
-    private final int SPEED = 1;
-    private final float MAX_FOOD = 3;
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
     public Boa() {
@@ -32,19 +26,23 @@ public class Boa extends Predators {
     }
 
     public float getWeight() {
+        float WEIGHT = 15;
         return WEIGHT;
     }
 
     @Override
     public int getobjPerService() {
+        int MAX_COUNTER = 30;
         return MAX_COUNTER;
     }
 
     public int getSpeed() {
+        int SPEED = 1;
         return SPEED;
     }
 
     public float getMaxFood() {
+        float MAX_FOOD = 3;
         return MAX_FOOD;
     }
 

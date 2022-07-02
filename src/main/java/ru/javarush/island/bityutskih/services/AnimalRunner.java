@@ -20,13 +20,13 @@ public class AnimalRunner implements Runnable {
     @Override
     public void run() {
         do {
-            Sleep.sleep(100);
+            ServiceSleep.sleep(100);
             eat();
-            Sleep.sleep(100);
+            ServiceSleep.sleep(100);
             reproduce();
-            Sleep.sleep(100);
+            ServiceSleep.sleep(100);
             move();
-            Sleep.sleep(100);
+            ServiceSleep.sleep(100);
         } while (!Thread.currentThread().isInterrupted());
     }
 
@@ -46,7 +46,7 @@ public class AnimalRunner implements Runnable {
     private void tryToEat(Nature n) {
         Integer chance = animal.getEating().get(n.getClass().getCanonicalName());
         if (chance != null && chance > 0) {
-            int randomsNum = Random.getRandomsNum(1000);
+            int randomsNum = ServiceRandoms.getRandomsNum(1000);
             if (chance >= randomsNum) {
                 if (n instanceof Plant) {
                     animal.setFull(animal.getFull() + n.getWeight());

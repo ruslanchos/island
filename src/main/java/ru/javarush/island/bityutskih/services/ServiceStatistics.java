@@ -33,9 +33,9 @@ public class ServiceStatistics implements Runnable {
                     deadCounter++;
                 }
             }
-            System.out.println("Хищников: " + predatorCounter );
+            System.out.println("Хищников: " + predatorCounter);
             System.out.println("Травоядных: " + herbCounter );
-            System.out.println("Трава: " + plantCounter);
+            System.out.println("Растений: " + plantCounter);
             System.out.println("Погибло: " + deadCounter);
             System.out.println("***********************************************");
         }

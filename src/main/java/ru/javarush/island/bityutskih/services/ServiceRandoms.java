@@ -3,8 +3,8 @@ package ru.javarush.island.bityutskih.services;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Random {
-    private Random() {
+public class ServiceRandoms {
+    private ServiceRandoms() {
     }
 
     public static int getRandomsNum(int num) {

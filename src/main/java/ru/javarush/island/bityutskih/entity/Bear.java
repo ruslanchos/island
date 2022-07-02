@@ -1,7 +1,5 @@
 package ru.javarush.island.bityutskih.entity;
 
-import ru.javarush.island.bityutskih.services.*;
-import ru.javarush.island.bityutskih.entity.*;
 
 
 import java.util.HashMap;
@@ -58,7 +56,7 @@ public class Bear extends Predators {
 
 
 
-    public HashMap<String, Integer> getChanceToEat() {
+    public HashMap<String, Integer> getEATING() {
         return EATING;
     }
 

@@ -21,13 +21,13 @@ public class ServiceRunner {
         ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(10000);
 
         scheduledExecutorService.scheduleAtFixedRate(new ServiceStatistics(service), 0, 1, TimeUnit.SECONDS);
-        scheduledExecutorService.scheduleAtFixedRate(new ServiceClean(service), 500, 1000, TimeUnit.MILLISECONDS);
+        scheduledExecutorService.scheduleAtFixedRate(new ServiceCleaner(service), 500, 1000, TimeUnit.MILLISECONDS);
 
         for (Nature a : nature) {
             if (a instanceof Animal) {
                 animalExecService.submit(new AnimalRunner((Animal) a, service));
             } else if (a instanceof Plant) {
-                plantExecService.submit(new PlantRunner((Plant) a, service));
+                plantExecService.submit(new PlantRunner((Plant) a));
             }
 
         }

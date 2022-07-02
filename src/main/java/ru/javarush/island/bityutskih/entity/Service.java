@@ -1,5 +1,5 @@
 package ru.javarush.island.bityutskih.entity;
-import ru.javarush.island.bityutskih.services.Random;
+import ru.javarush.island.bityutskih.services.ServiceRandoms;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -32,7 +32,7 @@ public class Service {
     }
     private void preAnimal(Nature n){
         nature.add(n);
-        for(int i = 1; i <= Random.getRandomNum(n.getobjPerService() / 2, n.getobjPerService() + 1); i++) {
+        for(int i = 1; i <= ServiceRandoms.getRandomNum(n.getobjPerService() / 2, n.getobjPerService() + 1); i++) {
             nature.add(n.getInstance());
         }
     }
