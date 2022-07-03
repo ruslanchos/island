@@ -3,10 +3,6 @@ package ru.javarush.island.bityutskih.entity;
 import java.util.HashMap;
 
 public class Sheep extends Herbivores {
-    private final float WEIGHT = 70;
-    private final int MAX_COUNTER = 140;
-    private final int SPEED = 3;
-    private final float MAX_FOOD = 15;
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
     public Sheep() {
@@ -29,20 +25,20 @@ public class Sheep extends Herbivores {
     }
 
     public float getWeight() {
-        return WEIGHT;
+        return (float) 70;
     }
 
     @Override
     public int getobjPerService() {
-        return MAX_COUNTER;
+        return 140;
     }
 
     public int getSpeed() {
-        return SPEED;
+        return 3;
     }
 
     public float getMaxFood() {
-        return MAX_FOOD;
+        return (float) 15;
     }
 
     public HashMap<String, Integer> getEating() {

@@ -32,7 +32,7 @@ public class ServiceRunner {
 
         }
         try {
-            Thread.currentThread().sleep(5000);
+            Thread.sleep(10000);
             animalExecService.shutdown();
             plantExecService.shutdown();
             scheduledExecutorService.shutdown();

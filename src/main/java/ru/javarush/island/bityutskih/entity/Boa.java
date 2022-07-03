@@ -26,24 +26,20 @@ public class Boa extends Predators {
     }
 
     public float getWeight() {
-        float WEIGHT = 15;
-        return WEIGHT;
+        return (float) 15;
     }
 
     @Override
     public int getobjPerService() {
-        int MAX_COUNTER = 30;
-        return MAX_COUNTER;
+        return 30;
     }
 
     public int getSpeed() {
-        int SPEED = 1;
-        return SPEED;
+        return 1;
     }
 
     public float getMaxFood() {
-        float MAX_FOOD = 3;
-        return MAX_FOOD;
+        return (float) 3;
     }
 
     public HashMap<String, Integer> getEating() {

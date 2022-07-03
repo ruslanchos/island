@@ -4,10 +4,6 @@ package ru.javarush.island.bityutskih.entity;
 import java.util.HashMap;
 
 public class Mouse extends Herbivores {
-    private final float WEIGHT = 0.05F;
-    private final int MAX_COUNTER = 500;
-    private final int SPEED = 1;
-    private final float MAX_FOOD = 0.01F;
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
     public Mouse() {
@@ -30,27 +26,25 @@ public class Mouse extends Herbivores {
     }
 
     public float getWeight() {
-        return WEIGHT;
+        return 0.05F;
     }
 
     @Override
     public int getobjPerService() {
-        return MAX_COUNTER;
+        return 500;
     }
 
     public int getSpeed() {
-        return SPEED;
+        return 1;
     }
 
     public float getMaxFood() {
-        return MAX_FOOD;
+        return 0.01F;
     }
 
     public HashMap<String, Integer> getEating() {
         return EATING;
     }
 
-    public Nature getInstance() {
-        return (Nature) new Mouse();
-    }
+    public Nature getInstance() { return new Mouse();  }
 }
