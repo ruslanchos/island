@@ -11,7 +11,7 @@ public class Mouse extends Herbivores {
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
     public Mouse() {
-        super(0.05F,500,1,0.01F);
+        super();
         EATING.put(Bear.class.getCanonicalName(), 0);
         EATING.put(Boa.class.getCanonicalName(), 0);
         EATING.put(Boar.class.getCanonicalName(), 0);

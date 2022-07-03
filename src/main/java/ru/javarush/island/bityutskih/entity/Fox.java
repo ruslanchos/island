@@ -11,7 +11,7 @@ public class Fox extends Predators {
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
     public Fox() {
-        super(8,30,2,2);
+        super();
         EATING.put(Bear.class.getCanonicalName(), 0);
         EATING.put(Boa.class.getCanonicalName(), 0);
         EATING.put(Boar.class.getCanonicalName(), 0);

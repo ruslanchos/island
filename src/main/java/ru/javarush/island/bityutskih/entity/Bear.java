@@ -9,7 +9,7 @@ public class Bear extends Predators {
 
 
     public Bear() {
-       super(500,5,2,80);
+       super();
         EATING.put(Boa.class.getCanonicalName(), 80);
         EATING.put(Boar.class.getCanonicalName(), 50);
         EATING.put(Buffalo.class.getCanonicalName(), 20);

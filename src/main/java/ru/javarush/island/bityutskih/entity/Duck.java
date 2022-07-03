@@ -1,7 +1,5 @@
 package ru.javarush.island.bityutskih.entity;
 
-import ru.javarush.island.bityutskih.entity.Herbivores;
-
 import java.util.HashMap;
 
 public class Duck extends Herbivores {
@@ -12,7 +10,7 @@ public class Duck extends Herbivores {
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
     public Duck() {
-        super(1,200,4,0.15F);
+        super();
         EATING.put(Bear.class.getCanonicalName(), 0);
         EATING.put(Boa.class.getCanonicalName(), 0);
         EATING.put(Boar.class.getCanonicalName(), 0);

@@ -7,7 +7,7 @@ public class Boa extends Predators {
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
     public Boa() {
-        super(15,30,1,3);
+        super();
         EATING.put(Bear.class.getCanonicalName(), 0);
         EATING.put(Boar.class.getCanonicalName(), 0);
         EATING.put(Buffalo.class.getCanonicalName(), 0);

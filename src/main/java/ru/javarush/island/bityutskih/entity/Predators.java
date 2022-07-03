@@ -2,9 +2,8 @@ package ru.javarush.island.bityutskih.entity;
 
 
 public abstract class Predators extends Animal {
-    public Predators(float weight, int max_counter, int speed, float max_food) {
+    public Predators() {
         super();
     }
 
-    //public abstract Nature getInstance();
 }

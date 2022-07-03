@@ -8,7 +8,7 @@ public class Boar extends Herbivores {
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
     public Boar() {
-        super(400,50,2,50);
+        super();
         EATING.put(Bear.class.getCanonicalName(), 0);
         EATING.put(Boar.class.getCanonicalName(), 0);
         EATING.put(Buffalo.class.getCanonicalName(), 0);

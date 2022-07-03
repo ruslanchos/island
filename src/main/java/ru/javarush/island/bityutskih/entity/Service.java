@@ -10,8 +10,6 @@ public class Service {
     public CopyOnWriteArrayList<Nature> getNature() {
         return nature;
     }
-/*    private final Service[][] Services;
-    private ServiceStatistics ServiceStatistics;*/
     public void makeNature() {
         preAnimal(new Bear());
         preAnimal(new Boa());

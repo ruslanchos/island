@@ -1,7 +1,5 @@
 package ru.javarush.island.bityutskih.entity;
 
-import ru.javarush.island.bityutskih.entity.Herbivores;
-
 import java.util.HashMap;
 
 public class Caterpillar extends Herbivores {
@@ -12,7 +10,7 @@ public class Caterpillar extends Herbivores {
     private final HashMap<String, Integer> EATING = new HashMap<>();
 
     public Caterpillar() {
-        super(0.01F,1000,0,0);
+        super();
         EATING.put(Bear.class.getCanonicalName(), 0);
         EATING.put(Boa.class.getCanonicalName(), 0);
         EATING.put(Boar.class.getCanonicalName(), 0);
